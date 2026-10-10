@@ -2,7 +2,7 @@
 
 `YOLOloader.exe`をダウンロードして起動し、「認識のみ」「ホストシールド追従」「Discord配信用」を選んで「起動」を押してください。Pythonの事前インストールは不要です。Windows 10/11の64bit版、NVIDIAのCUDA対応GPUとドライバーが必要です。確認済みGPUはRTX 3080です。
 
-ダウンロード: https://github.com/EMT0129/YOLO-valo/releases/download/loader-v1.2.0/YOLOloader.exe
+
 
 ローダーとImGui設定画面は黒と紫のネオン風デザインです。ローダー画面ではモード選択と起動・停止、現在の状態を表示します。
 
