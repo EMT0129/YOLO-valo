@@ -2,7 +2,9 @@
 
 `YOLOloader.exe`をダウンロードして起動し、「認識のみ」「ホストシールド追従」「Discord配信用」を選んで「起動」を押してください。Pythonの事前インストールは不要です。Windows 10/11の64bit版、NVIDIAのCUDA対応GPUとドライバーが必要です。確認済みGPUはRTX 3080です。
 
-ダウンロード: https://github.com/EMT0129/YOLO-valo/releases/download/loader-v1.1.0/YOLOloader.exe
+ダウンロード: https://github.com/EMT0129/YOLO-valo/releases/download/loader-v1.2.0/YOLOloader.exe
+
+ローダーとImGui設定画面は黒と紫のネオン風デザインです。ローダー画面ではモード選択と起動・停止、現在の状態を表示します。
 
 ## データの扱い
 
@@ -32,7 +34,7 @@ Discord配信用は認識ウィンドウとサークルをキャプチャ可能�
 
 モデル内容を変更する場合は配布manifestとEXEを再ビルドします。ローダーはEXEに同梱したハッシュで照合するため、GitHub上のデータを差し替えるだけでは起動できません。
 
-v1.1.0は変更していない実行部品・モデルをv1.0.0の公開アーカイブから取得し、追加の`runtime-imgui.zip`を最後に展開します。どちらもEXE内の固定SHA-256で照合します。旧Releaseのアーカイブも必要です。
+v1.2.0は変更していない実行部品・モデルをv1.0.0の公開アーカイブから取得し、追加の`runtime-imgui.zip`を最後に展開します。どちらもEXE内の固定SHA-256で照合します。旧Releaseのアーカイブも必要です。
 
 ソースからのビルドはPython 3.12 x64で`setup_runtime.cmd`を実行し、開発環境に`pyinstaller==6.22.3`を追加してください。`build_loader_update.py`で更新アーカイブとmanifestを作り、PyInstallerで`YOLOloader.py`をonefile/windowedビルドします。`loader_release/loader_manifest.json`を`--add-data`でEXEに同梱してください（Windowsでは絶対パスと`;.`を指定）。`build_loader_assets.py`は全実行部品を作り直す場合に使用します。GitHub公開用コードは`publish_loader.py`です。
 
